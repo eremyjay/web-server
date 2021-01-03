@@ -1,5 +1,5 @@
 {
-  "name": "web-server",
+  "name": "@eremyjay/web-server",
   "description": "A web server based on feathers with multiple features including mongoose integration, redis support, choice of web server, built in user authentication, built in services management and heartbeat.",
   "version": "1.0.0",
   "homepage": "https://localhost",

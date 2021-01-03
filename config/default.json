@@ -1,0 +1,148 @@
+{
+  "host": "localhost",
+  "port": 8080,
+  "https-port": 4343,
+  "root": "http://localhost:4343",
+  "env": "development",
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "logger": {
+    "level": "debug",
+    "debug": ""
+  },
+  "session": {
+    "secret": "session.secret",
+    "name": "session.name",
+    "key": "session.key",
+    "resave": false,
+    "rolling": true,
+    "saveUninitialized": true,
+    "cookie": {
+      "secure": true,
+      "maxAge": 1200000
+    }
+  },
+  "authentication": {
+    "admin": ["admin.user.identifier"],
+    "entity": "user",
+    "service": "users",
+    "secret": "authentication.secret",
+    "IFTTTServiceKey": "ifttt.service.key",
+    "authStrategies": [
+      "jwt",
+      "local",
+      "oauth"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://localhost:4343",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "oauth": {
+      "redirect": "/login/oauth",
+      "defaults": {
+        "protocol": "https",
+        "host": "localhost:4343",
+        "path": "/auth",
+        "state": true
+      },
+      "google": {
+        "enabled": false,
+        "key": "google.oauth.key",
+        "secret": "google.oauth.secret",
+        "scope": [
+          "openid",
+          "profile",
+          "email"
+        ]
+      },
+      "facebook": {
+        "enabled": false,
+        "key": "facebook.oauth.key",
+        "secret": "facebook.oauth.secret",
+        "scope": [
+          "public_profile",
+          "email"
+        ]
+      },
+      "twitter": {
+        "enabled": false,
+        "key": "twitter.oauth.key",
+        "secret": "twitter.oauth.secret"
+      },
+      "linkedin2": {
+        "enabled": false,
+        "key": "linkedin.oauth.key",
+        "secret": "linkedin.oauth.secret",
+        "scope": [
+          "r_liteprofile",
+          "r_emailaddress"
+        ],
+        "state": true
+      },
+      "instagram": {
+        "enabled": false,
+        "key": "instagram.oauth.key",
+        "secret": "instagram.oauth.secret",
+        "scope": [
+          "basic",
+          "public_content"
+        ]
+      },
+      "producthunt": {
+        "enabled": false,
+        "key": "producthunt.oauth.key",
+        "secret": "producthunt.oauth.secret",
+        "scope": [
+          "public",
+          "private"
+        ]
+      }
+    }
+  },
+  "command": {
+    "commandControlKey": "command.control.key",
+    "maxServers": 50,
+    "maxFailures": 1,
+    "heartbeatTime": 1,
+    "managersRefreshTime": 1,
+    "managersInfrequentRefreshTime": 5
+  },
+  "redis": {
+    "host": "host.docker.internal",
+    "port": 6379,
+    "password": "redis.password",
+    "namespace": "namespace",
+    "enableReadyCheck": true
+  },
+  "cluster": {
+    "mode": "network",
+    "minimumInstances": 1,
+    "maximumInstances": 4,
+    "debug": false
+  },
+  "features": {
+    "cluster": false,
+    "redis": false,
+    "mongo": true,
+    "spdy": false,
+    "ssl": true
+  },
+  "mongodb": "mongodb://localhost:27017",
+  "cache": {
+    "enabled": false,
+    "logging": false,
+    "path": "/cache"
+  }
+}

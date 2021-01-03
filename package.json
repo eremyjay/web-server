@@ -1,0 +1,92 @@
+{
+  "name": "web-server",
+  "description": "A web server based on feathers with multiple features including mongoose integration, redis support, choice of web server, built in user authentication, built in services management and heartbeat.",
+  "version": "",
+  "homepage": "https://localhost",
+  "main": "server",
+  "keywords": [
+    "feathers"
+  ],
+  "author": {
+    "name": "Jeremy de Oliveira-Kumar [Interact.do]",
+    "email": "web-server@localhost"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "server",
+    "test": "test/"
+  },
+  "engines": {
+    "node": ">=6.0.0",
+    "npm": ">=3.0.0"
+  },
+  "scripts": {
+    "build": "npm build",
+    "clean": "rm -rf node_modules",
+    "reinstall": "npm run clean && npm install",
+    "rebuild": "npm run clean && npm install && npm run build",
+    "test": "npm run eslint && npm run mocha",
+    "eslint": "eslint server/. test/. --config .eslintrc.json",
+    "start": "node server/",
+    "preinstall": "# npx npm-force-resolutions",
+    "mocha": "mocha test/ --recursive"
+  },
+  "dependencies": {
+    "@feathersjs/authentication": "^4.5.2",
+    "@feathersjs/authentication-local": "^4.5.2",
+    "@feathersjs/authentication-oauth": "^4.5.2",
+    "@feathersjs/configuration": "^4.5.2",
+    "@feathersjs/errors": "^4.5.2",
+    "@feathersjs/express": "^4.5.2",
+    "@feathersjs/feathers": "^4.5.2",
+    "@google-cloud/logging-winston": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "connect-redis": "^4.0.4",
+    "cors": "^2.8.5",
+    "cron": "^1.8.2",
+    "crypto-random-string": "^3.2.0",
+    "dompurify": "^2.0.8",
+    "express-session": "^1.17.1",
+    "express-sticky-cluster": "git+https://github.com/interactdo/express-sticky-cluster.git",
+    "feathers-mongoose": "^8.3.0",
+    "feathers-redis-cache": "git+https://github.com/interactdo/feathers-redis-cache.git",
+    "get-random-values": "^1.2.0",
+    "helmet": "^3.21.3",
+    "ioredis": "^4.16.0",
+    "ip6addr": "^0.2.3",
+    "jsdom": "^16.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash.assignin": "^4.2.0",
+    "lodash.clonedeep": "^4.5.0",
+    "moment": "^2.24.0",
+    "mongoose": "^5.9.27",
+    "node-base64-image": "^1.0.7",
+    "node-machine-id": "^1.1.12",
+    "node-turn": "0.0.6",
+    "npm-force-resolutions": "0.0.3",
+    "pem": "^1.14.4",
+    "postman-request": "^2.88.1-postman.22",
+    "rate-limiter-flexible": "^2.1.13",
+    "spdy": "^4.0.1",
+    "sticky-cluster": "^0.3.5",
+    "stun": "^2.1.0",
+    "twitter": "^1.7.1",
+    "type-is": "^1.6.18",
+    "uniqid": "^5.2.0",
+    "uuid": "^7.0.3",
+    "winston": "^3.2.1",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "mocha": "^7.1.1"
+  },
+  "resolutions": {
+    "lodash": "^4.17.15",
+    "yargs-parser": "^18.1.3",
+    "node-forge": "^0.10.0",
+    "core-js": "^3.6.5"
+  }
+}

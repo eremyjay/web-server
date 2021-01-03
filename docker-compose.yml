@@ -1,0 +1,19 @@
+version: '3'
+services:
+  api:
+    image: interact-do-bare-dev
+    build: .
+    networks:
+      - backend
+    ports:
+      - "4343:4343"
+
+  web-cli:
+    image: interact-do-bare-dev
+    networks:
+      - backend
+    command: sh
+
+networks:
+  backend:
+    driver: bridge

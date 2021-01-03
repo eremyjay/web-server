@@ -1,0 +1,12 @@
+{
+  "apps": [{
+    "name" : "interact.do.bare.dev",
+    "script" : "./server/index.js",
+    "instance_var": "INSTANCE_ID",
+    "env": {
+      "NODE_ENV": "development",
+      "INSTANCE_ID": 0,
+      "PORT": "4343"
+    }
+  }]
+}

@@ -1,14 +1,14 @@
 {
   "name": "web-server",
   "description": "A web server based on feathers with multiple features including mongoose integration, redis support, choice of web server, built in user authentication, built in services management and heartbeat.",
-  "version": "",
+  "version": "1.0.0",
   "homepage": "https://localhost",
   "main": "server",
   "keywords": [
-    "feathers"
+    "web", "server", "feathers", "mongoose", "redis", "spdy", "https", "authentication", "c2"
   ],
   "author": {
-    "name": "Jeremy de Oliveira-Kumar [Interact.do]",
+    "name": "Jeremy de Oliveira-Kumar",
     "email": "web-server@localhost"
   },
   "contributors": [],
